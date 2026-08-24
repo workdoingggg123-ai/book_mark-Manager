@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Manager</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>BOOKMARK MANAGER</h1>
+        <p>Save and organize your favorite links</p>
+    </header>
+
+    <main>
+
+        <section class="input">
+
+            <form class="form-class">
+
+                <div class="input-class">
+
+                    <div class="input-head">
+
+                        <svg viewBox="0 0 24 24" width="40" height="40">
+                            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+                        </svg>
+
+                        <h2>ADD NEW BOOKMARK</h2>
+
+                    </div>
+
+                    <div class="in-start">
+
+                        <div class="field ">
+                            <label for="web-name">Website Name</label>
+                            <input
+                                type="text"
+                                id="web-name"
+                                placeholder="Website Name (e.g. Google)"
+                                required>
+                        </div>
+
+                        <div class="field">
+                            <label for="url-name">Website URL</label>
+                            <input
+                                type="text"
+                                id="url-name"
+                                placeholder="(e.g) Website.com"
+                                required>
+                        </div>
+
+                        <button type="submit" id = "submit">
+                            ADD BOOKMARK
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <section class="saves-infoo">
+        <div class="saves-head">
+            <svg viewBox="0 0 24 24" width="40" height="40" class="neon-home">
+  <path d="M3 10.5L12 3l9 7.5M5 9.5V21h14V9.5M9 21v-6h6v6"
+        fill="none"
+        stroke="#00CFC3"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+</svg>
+            <h2>Your Bookmark</h2>
+            <div class="search-box">
+            <svg viewBox="0 0 24 24" width="40" height="40" class="neon-search">
+  <circle cx="11" cy="11" r="7"/>
+  <path d="M20 20l-4.3-4.3"/>
+</svg>
+            <input type="search"  id="search" placeholder="Search Bookmark..">
+        
+     <svg viewBox="0 0 24 24" width="40" height="40" class="undo-icon">
+  <path d="M9 14L4 9l5-5" fill="none"/>
+  <path d="M4 9h9a7 7 0 1 1 0 14h-1"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+</svg>
+        
+        </div>
+        </div>
+
+
+        <div class="main-saves">
+            <div class="book-save">
+            <img src="https://www.google.com/s2/favicons?domain=google.com&sz=256" alt="img">
+             <h2>Google</h2>
+             <a href="https://google.com">https://google.com</a>
+
+             <div class="open-mark">
+                <button class="btn">OPEN
+                </button>
+                <svg viewBox="0 0 24 24" width="40" height="40" class="neon-open">
+  <path d="M14 3h7v7"/>
+  <path d="M21 3L10 14"/>
+  <path d="M21 14v4a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h4"/>
+                </svg>
+</div>
+
+<svg viewBox="0 0 24 24" width="40" height="40" class="delete-icon">
+  <path d="M3 6h18"/>
+  <path d="M8 6V4h8v2"/>
+  <path d="M6 6l1 14h10l1-14"/>
+  <path d="M10 10v6"/>
+  <path d="M14 10v6"/>
+</svg>
+        </div>
+
+
+        <div class="book-save">
+            <img src="https://www.google.com/s2/favicons?domain=Youtube.com&sz=256" alt="img">
+             <h2>Youtube</h2>
+             <a href="https://Youtube.com">https://Youtube.com</a>
+
+             <div class="open-mark">
+                <button class="btn">OPEN</button>
+                <svg viewBox="0 0 24 24" width="40" height="40" class="neon-open">
+               <path d="M14 3h7v7"/>
+  <path d="M21 3L10 14"/>
+  <path d="M21 14v4a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h4"/>
+</svg>
+
+</div>
+<svg viewBox="0 0 24 24" width="40" height="40" class="delete-icon">
+  <path d="M3 6h18"/>
+  <path d="M8 6V4h8v2"/>
+  <path d="M6 6l1 14h10l1-14"/>
+  <path d="M10 10v6"/>
+  <path d="M14 10v6"/>
+</svg>
+        </div>
+<div class="book-save">
+           <img src="https://www.google.com/s2/favicons?domain=github.com&sz=256" alt="img">
+             <h2>GitHub</h2>
+             <a href="https://github.com">https://github.com</a>
+
+             <div class="open-mark">
+                <button class="btn">OPEN
+                </button>
+                <svg viewBox="0 0 24 24" width="40" height="40" class="neon-open">
+  <path d="M14 3h7v7"/>
+  <path d="M21 3L10 14"/>
+  <path d="M21 14v4a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h4"/>
+</svg>
+
+</div>
+<svg viewBox="0 0 24 24" width="40" height="40" class="delete-icon">
+  <path d="M3 6h18"/>
+  <path d="M8 6V4h8v2"/>
+  <path d="M6 6l1 14h10l1-14"/>
+  <path d="M10 10v6"/>
+  <path d="M14 10v6"/>
+</svg>
+        </div>
+<div class="book-save">
+            <img src="https://www.google.com/s2/favicons?domain=netflix.com&sz=256" alt="img">
+             <h2>Netflix</h2>
+             <a href="https://meetnetflix.vercel.app/">https://netflix.com</a>
+
+             <div class="open-mark">
+                <button class="btn">OPEN
+                </button>
+                <svg viewBox="0 0 24 24" width="40" height="40" class="neon-open">
+  <path d="M14 3h7v7"/>
+  <path d="M21 3L10 14"/>
+  <path d="M21 14v4a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h4"/>
+</svg>
+
+</div>
+<svg viewBox="0 0 24 24" width="40" height="40" class="delete-icon">
+  <path d="M3 6h18"/>
+  <path d="M8 6V4h8v2"/>
+  <path d="M6 6l1 14h10l1-14"/>
+  <path d="M10 10v6"/>
+  <path d="M14 10v6"/>
+</svg>
+        </div>
+
+        </div>
+
+
+    </section>
+
+</body>
+<script src="script.js"></script>
+</html>

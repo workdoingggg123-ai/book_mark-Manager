@@ -1,0 +1,820 @@
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: #06070B;
+    color: #2DD4BF;
+    font-family: "Poppins", sans-serif;
+    padding-bottom: 50px;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+header {
+    text-align: center;
+    padding: 55px 20px 35px;
+}
+
+header h1 {
+    color: #2DD4BF;
+    font-size: clamp(30px, 5vw, 48px);
+    font-weight: 700;
+    letter-spacing: clamp(3px, 1vw, 8px);
+    text-shadow: 0 0 15px rgba(45, 212, 191, 0.25);
+}
+
+header p {
+    color: #9BD9D3;
+    margin-top: 10px;
+    font-size: clamp(14px, 2vw, 18px);
+}
+
+
+/* ================================
+   ADD BOOKMARK FORM
+================================ */
+
+.form-class {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.input-class {
+    width: 100%;
+    max-width: 1200px;
+
+    background: #0E1115;
+
+    border: 1px solid rgba(0, 207, 195, 0.5);
+    border-radius: 22px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 0 25px rgba(0, 207, 195, 0.08),
+        inset 0 0 25px rgba(0, 207, 195, 0.03);
+}
+
+
+/* ================================
+   FORM HEADING
+================================ */
+
+.input-head {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.input-head svg {
+    width: 38px;
+    height: 38px;
+}
+
+.input-head h2 {
+    color: #2DD4BF;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+
+/* ================================
+   SVG
+================================ */
+
+svg {
+    fill: none;
+    stroke: #00CFC3;
+    stroke-width: 1;
+    filter:
+        drop-shadow(0 0 3px #00CFC3)
+        drop-shadow(0 0 8px #00CFC3);
+}
+
+
+/* ================================
+   INPUT GRID
+================================ */
+
+.in-start {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 20px;
+    align-items: end;
+}
+
+
+/* ================================
+   INPUT FIELDS
+================================ */
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #ffffff;
+    margin-bottom: 9px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+
+    padding: 15px 17px;
+
+    background: #0B1015;
+    color: white;
+
+    border: 2px solid rgba(0, 207, 195, 0.6);
+    border-radius: 12px;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    transition:
+        border-color 0.25s,
+        box-shadow 0.25s;
+}
+
+input::placeholder {
+    color: #7e8b8e;
+}
+
+input:focus {
+    border-color: #2DD4BF;
+
+    box-shadow:
+        0 0 8px rgba(0, 207, 195, 0.3),
+        0 0 20px rgba(0, 207, 195, 0.12);
+}
+
+
+/* ================================
+   MAIN BUTTON
+================================ */
+
+button {
+    padding: 15px 25px;
+
+    background: #3FD8C3;
+    color: #050505;
+
+    border: none;
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.2s,
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+button:hover {
+    background: #2DD4BF;
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 15px rgba(0, 207, 195, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* ================================
+   SAVED BOOKMARK SECTION
+================================ */
+
+.saves-infoo {
+    width: min(1200px, calc(100% - 40px));
+
+    margin: 30px auto 0;
+
+    padding: 35px;
+
+    background: #0E1115;
+
+    border: 1px solid rgba(0, 207, 195, 0.5);
+    border-radius: 22px;
+
+    box-shadow:
+        0 0 25px rgba(0, 207, 195, 0.08),
+        inset 0 0 25px rgba(0, 207, 195, 0.03);
+}
+
+
+/* ================================
+   SAVED SECTION HEADER
+================================ */
+
+.saves-head {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    width: 100%;
+
+    padding: 8px;
+
+    border-radius: 15px;
+}
+
+.saves-head h2 {
+    color: #2DD4BF;
+    font-size: 25px;
+    white-space: nowrap;
+}
+
+
+/* ================================
+   SEARCH BOX
+================================ */
+
+.search-box {
+    position: relative;
+
+    width: 350px;
+
+    margin-left: auto;
+}
+
+#search {
+    width: 100%;
+
+    padding: 14px 55px 14px 48px;
+
+    border-radius: 12px;
+}
+
+
+/* Search icon */
+
+.neon-search {
+    position: absolute;
+
+    left: 15px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 21px;
+    height: 21px;
+
+    pointer-events: none;
+}
+
+
+/* ================================
+   UNDO ICON
+================================ */
+
+.undo-icon {
+    position: absolute;
+
+    right: 15px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 23px;
+    height: 23px;
+
+    color: #00CFC3;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s,
+        transform 0.2s;
+}
+
+.undo-icon:hover {
+    color: #00fff2;
+
+    transform:
+        translateY(-50%)
+        scale(1.12);
+}
+
+
+/* ================================
+   BOOKMARK CARD
+================================ */
+
+.book-save {
+    display: grid;
+
+    grid-template-columns: 55px 150px 1fr 180px 45px;
+
+    align-items: center;
+
+    gap: 20px;
+
+    width: 100%;
+
+    margin: 20px 0;
+
+    padding: 20px 25px;
+
+    background: #07090C;
+
+    border: 1px solid rgba(0, 207, 195, 0.15);
+
+    border-radius: 18px;
+
+    transition:
+        border-color 0.2s,
+        background 0.2s,
+        transform 0.2s;
+}
+
+.book-save:hover {
+    background: #0A0E12;
+
+    border-color: rgba(0, 207, 195, 0.4);
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   BOOKMARK IMAGE
+================================ */
+
+.book-save img {
+    width: 45px;
+    height: 45px;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+}
+
+
+/* ================================
+   BOOKMARK TITLE
+================================ */
+
+.book-save h2 {
+    color: #ffffff;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* ================================
+   BOOKMARK LINK
+================================ */
+
+.book-save a {
+    min-width: 0;
+
+    color: #9BD9D3;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    transition: color 0.2s;
+}
+
+.book-save a:hover {
+    color: #2DD4BF;
+}
+
+
+/* ================================
+   OPEN BUTTON
+================================ */
+
+.open-mark {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+}
+
+.open-mark button {
+    width: 160px;
+
+    padding: 12px 20px;
+
+    background: transparent;
+
+    color: white;
+
+    border: 2px solid rgba(0, 207, 195, 0.45);
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 12px rgba(0, 207, 195, 0.18);
+
+    transition:
+        background 0.2s,
+        color 0.2s,
+        border-color 0.2s;
+}
+
+.open-mark button:hover {
+    background: rgba(0, 207, 195, 0.12);
+
+    color: #2DD4BF;
+
+    border-color: #2DD4BF;
+}
+
+
+/* ================================
+   OPEN ICON
+================================ */
+
+.neon-open {
+    position: absolute;
+
+    left: 18px;
+
+    width: 20px;
+    height: 20px;
+
+    pointer-events: none;
+}
+
+
+/* ================================
+   DELETE ICON
+================================ */
+
+.delete-icon {
+    width: 30px;
+    height: 30px;
+
+    fill: none;
+
+    stroke: #FF3B30;
+
+    stroke-width: 2;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    cursor: pointer;
+
+    filter:
+        drop-shadow(0 0 3px #FF3B30)
+        drop-shadow(0 0 8px #FF3B30);
+
+    transition:
+        transform 0.2s,
+        filter 0.2s;
+}
+
+.delete-icon:hover {
+    transform: scale(1.12);
+
+    filter:
+        drop-shadow(0 0 5px #FF3B30)
+        drop-shadow(0 0 12px #FF3B30);
+}
+
+
+/* ==================================================
+   LARGE TABLET
+   1200px
+================================================== */
+
+@media (max-width: 1200px) {
+
+    .input-class {
+        max-width: 100%;
+    }
+
+    .saves-infoo {
+        width: calc(100% - 40px);
+    }
+
+    .book-save {
+        grid-template-columns:
+            50px
+            130px
+            1fr
+            160px
+            40px;
+
+        gap: 15px;
+    }
+
+    .open-mark button {
+        width: 145px;
+    }
+}
+
+
+/* ==================================================
+   TABLET
+   900px
+================================================== */
+
+@media (max-width: 900px) {
+
+    header {
+        padding-top: 40px;
+    }
+
+    .in-start {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .in-start button {
+        grid-column: 1 / -1;
+
+        width: 100%;
+    }
+
+    .saves-head {
+        flex-wrap: wrap;
+    }
+
+    .search-box {
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+    .book-save {
+        grid-template-columns:
+            50px
+            1fr
+            40px;
+
+        gap: 15px;
+    }
+
+    .book-save h2 {
+        grid-column: 2;
+    }
+
+    .book-save a {
+        grid-column: 2;
+    }
+
+    .open-mark {
+        grid-column: 2;
+        justify-content: flex-start;
+    }
+
+    .delete-icon {
+        grid-column: 3;
+        grid-row: 1 / 4;
+        justify-self: end;
+    }
+
+    .open-mark button {
+        width: 150px;
+    }
+}
+
+
+/* ==================================================
+   MOBILE
+   600px
+================================================== */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 35px 15px 25px;
+    }
+
+    header h1 {
+        letter-spacing: 3px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+
+    /* Form */
+
+    .form-class {
+        padding: 15px;
+    }
+
+    .input-class {
+        padding: 22px;
+
+        border-radius: 18px;
+    }
+
+    .input-head {
+        gap: 10px;
+
+        margin-bottom: 22px;
+    }
+
+    .input-head svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .input-head h2 {
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+
+    .in-start {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .in-start button {
+        grid-column: auto;
+
+        width: 100%;
+    }
+
+
+    /* Saved section */
+
+    .saves-infoo {
+        width: calc(100% - 30px);
+
+        padding: 20px;
+
+        border-radius: 18px;
+    }
+
+    .saves-head {
+        gap: 12px;
+    }
+
+    .saves-head h2 {
+        font-size: 20px;
+    }
+
+    .neon-home {
+        width: 30px;
+        height: 30px;
+    }
+
+
+    /* Search */
+
+    .search-box {
+        width: 100%;
+    }
+
+
+    /* Bookmark */
+
+    .book-save {
+        grid-template-columns: 45px 1fr 30px;
+
+        gap: 12px;
+
+        padding: 16px;
+
+        margin: 15px 0;
+
+        border-radius: 15px;
+    }
+
+    .book-save img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .book-save h2 {
+        font-size: 16px;
+    }
+
+    .book-save a {
+        font-size: 12px;
+    }
+
+    .open-mark {
+        grid-column: 2;
+
+        width: 100%;
+    }
+
+    .open-mark button {
+        width: 100%;
+
+        padding: 11px 15px;
+    }
+
+    .neon-open {
+        left: 15px;
+
+        width: 18px;
+        height: 18px;
+    }
+
+    .delete-icon {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+   400px
+================================================== */
+
+@media (max-width: 400px) {
+
+    header h1 {
+        font-size: 27px;
+
+        letter-spacing: 2px;
+    }
+
+    .input-class {
+        padding: 18px;
+    }
+
+    .input-head h2 {
+        font-size: 15px;
+    }
+
+    .saves-infoo {
+        width: calc(100% - 20px);
+
+        padding: 15px;
+    }
+
+    .book-save {
+        grid-template-columns: 40px 1fr 25px;
+
+        padding: 14px 12px;
+    }
+
+    .book-save img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .book-save h2 {
+        font-size: 15px;
+    }
+
+    .book-save a {
+        font-size: 11px;
+    }
+
+    .open-mark button {
+        font-size: 12px;
+
+        padding: 10px;
+    }
+
+    .neon-open {
+        left: 12px;
+    }
+}
